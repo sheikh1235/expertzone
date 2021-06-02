@@ -1,0 +1,85 @@
+/*hover for 'forgot password link' */
+a:hover {
+  color: rgb(0, 0, 0, 0.6);
+}
+
+/*class for the sub headings*/
+.subheading {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/*class for the form boxes */
+.box {
+  float: left;
+  width: 48.87%;
+  padding: 50px;
+  padding-left: 15px;
+  padding-top: 25px;
+  height: 315px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
+}
+
+/*style for submit buttons*/
+input[type="submit"] {
+  background-color: white;
+  border-color: rgba(92, 58, 58, 0.4);
+  border-width: 1.5px;
+  padding: 6px 13px;
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+  color: rgb(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(0, 0, 0, 0.4);
+}
+
+/*style for text boxes*/
+input[type="text"] {
+  padding: 4px 150px;
+  padding-left: 3px;
+  margin: 1px;
+}
+
+/*style for password field*/
+input[type="password"] {
+  padding: 4px 150px;
+  padding-left: 3px;
+  margin-top: 0px;
+  margin: 2px;
+}
+
+.auth_line {
+  background-color: rgb(0, 0, 0, 0.2);
+  width: 100%;
+}
+.auth_line_bottom {
+  background-color: rgb(0, 0, 0, 0.4);
+}
+
+.auth_email_label {
+  font-size: 13px;
+  line-height: 70px;
+}
+
+.auth_email_subhead {
+  line-height: 30px;
+}
+.auth_space_creator {
+  line-height: 80px;
+}
+.auth_space_creator_s {
+  line-height: 40px;
+}
+.auth_space_50 {
+  line-height: 50px;
+}
+
+.auth_forgot_pass {
+  text-decoration: underline;
+  font-size: 14px;
+}

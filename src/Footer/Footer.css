@@ -1,0 +1,95 @@
+/* Author: Asadullah, Roll No: 18L-1008 */
+
+/* ----- footer CSS starts ----- */
+
+.ez_footer {
+  background-color: #fafafa;
+  border-top: 1px solid rgb(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgb(0, 0, 0, 0.15);
+}
+
+.footer_content {
+  display: flex;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.footer_desc {
+  display: flex;
+  justify-content: space-between;
+  width: 900px;
+  margin-left: 120px;
+}
+
+.contact_us {
+  width: 400px;
+  word-wrap: break-word;
+}
+
+.footer_head {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.footer_list {
+  padding-left: 18px;
+  font-size: 15px;
+  margin-top: 30px;
+}
+
+.footer_link {
+  margin-bottom: 16px;
+}
+.footer_link::marker {
+  color: rgb(0, 0, 0, 0.6);
+}
+
+.footer_link:hover ::marker {
+  color: #59b210;
+}
+
+.footer_link > a {
+  text-decoration: none;
+  transition: 0.2s ease;
+  color: rgb(0, 0, 0, 0.6);
+}
+
+.footer_link > a:hover {
+  color: #59b210;
+}
+
+#ez_lg {
+  color: #59b210;
+  font-size: 15px;
+}
+
+.contact_list {
+  list-style: none;
+  padding: 0;
+  color: rgb(0, 0, 0, 0.6);
+}
+
+.contact_us {
+  margin-bottom: 6px;
+}
+.copyright {
+  background-color: #222222;
+  padding: 12px 0;
+}
+
+.copyright_text {
+  font-size: 12px;
+  color: #ffffff;
+}
+.green {
+  color: #59b210;
+}
+
+.footer_logo {
+  margin-top: -10px;
+}
+.ez_logo_foot {
+  height: 44px;
+}
+/* ----- footer CSS ends ----- */

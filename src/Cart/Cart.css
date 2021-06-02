@@ -1,0 +1,30 @@
+/* Author: Asadullah; Roll No: 18L-1008 */
+
+.cart_table_heading {
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #333333;
+}
+
+.cart_summary {
+  margin-top: 60px;
+}
+
+.cart_table {
+  width: 100%;
+  border: 1px solid rgb(0, 0, 0, 0.1);
+}
+
+/* product row CSS starts */
+
+.cart_product_thumb > img {
+  width: 50px;
+}
+.cart_product {
+  font-size: 14px;
+}
+.trash_can {
+  font-size: 17px;
+}
+
+/* product row CSS ends */

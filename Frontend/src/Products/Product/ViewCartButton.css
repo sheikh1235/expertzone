@@ -1,0 +1,27 @@
+
+.ViewCart{
+    position: relative;
+    color:#999999;
+    background-color: white;
+    border-color:  #999999;
+    border-width: 1px;
+    padding: 4.5px 6px;
+    font-size: 11px;
+    font-family: "Poppins", sans-serif;
+    color: #999999;
+    cursor: pointer;
+    text-align: center;
+    border-style: solid;
+    border-radius: 0px;
+  }
+  
+  .ViewCart:hover{
+    background-color: #59B210;
+    color: #fff;
+    transition-duration: 0.25s;
+  }
+  
+  .mar{
+      margin-right: 4px;
+    }
+    

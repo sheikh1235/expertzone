@@ -8,7 +8,14 @@ import "./Header.css";
 class Header extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    let my_active = ["", "", "", ""];
+    if (this.props.index) {
+      my_active[this.props.index - 1] = "active";
+    }
+    this.state = {
+      active: my_active,
+    };
+    console.log(this.state);
   }
   render() {
     return (
@@ -61,18 +68,24 @@ class Header extends Component {
                 </div>
               </li>
               <li class="nav_link">
-                <a id="active" href="#">
+                <a id={this.state.active[0]} href="#">
                   Home
                 </a>
               </li>
               <li class="nav_link">
-                <a href="#">Shop</a>
+                <a id={this.state.active[1]} href="#">
+                  Shop
+                </a>
               </li>
               <li class="nav_link">
-                <a href="#">Contact us</a>
+                <a id={this.state.active[2]} href="#">
+                  Contact us
+                </a>
               </li>
               <li class="nav_link">
-                <a href="#">About us</a>
+                <a id={this.state.active[3]} href="#">
+                  About us
+                </a>
               </li>
             </ul>
           </div>

@@ -1,12 +1,10 @@
 import "./App.css";
-import Header from "./Header/Header";
-import Footer from "./Footer/Footer";
+import ShopPage from "./Pages/ShopPage";
 
 function App() {
   return (
     <div>
-      <Header />
-      <Footer />
+      <ShopPage />
     </div>
   );
 }

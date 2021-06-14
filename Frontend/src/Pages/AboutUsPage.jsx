@@ -1,25 +1,26 @@
-//Author: Izna Zubair; RollNo: 18L-0901
+//Author: M. Aadil Hassan; RollNo: 18L-1018
 
 import React, { Component } from "react";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Heading from "../ExtraComponents/Heading";
-import Products from "../Products/Products";
-class ShopPage extends Component {
+import AboutUs from "../AboutUs/AboutUs";
+
+class AboutUsPage extends Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
   render() {
     return (
-      <div className="ez_Shop_page">
-        <Header index={2} />
-        <Heading heading="Shop > ALl products" />
-        <Products />
+      <div className="about_us_page">
+        <Header index={4} />
+        <Heading heading="about us" />
+        <AboutUs />
         <Footer />
       </div>
     );
   }
 }
 
-export default ShopPage;
+export default AboutUsPage;

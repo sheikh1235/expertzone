@@ -1,0 +1,43 @@
+/*Author: M. Aadil Hassan; RollNo: 18L-1018*/
+
+.ab_main_heading {
+  font-style: unset;
+  font-size: 24px;
+  color: rgb(0, 0, 0, 0.5);
+  text-transform: uppercase;
+}
+.about_us_wrap {
+  margin: 70px 0;
+}
+
+.ab_inner_heading {
+  font-style: unset;
+  font-size: 21px;
+  color: rgb(0, 0, 0, 0.5);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.ab_inner_text {
+  font-style: unset;
+  font-size: 13px;
+  color: rgb(0, 0, 0, 0.5);
+  margin-bottom: 12px;
+}
+
+.ab_text_wrap {
+  padding-right: 700px;
+  padding-left: 5px;
+}
+
+.ab_features {
+  padding-right: 700px;
+  padding-left: 5px;
+  margin-bottom: 12px;
+}
+
+.ab_features_text {
+  color: green;
+  font-style: unset;
+  font-size: 15px;
+}

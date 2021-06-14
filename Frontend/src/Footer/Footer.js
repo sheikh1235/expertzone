@@ -33,7 +33,7 @@ class Footer extends Component {
                       <a href="">My Wishlist</a>
                     </li>
                     <li class="footer_link">
-                      <a href="">My Cart</a>
+                      <a href="/cart">My Cart</a>
                     </li>
                   </ul>
                 </div>

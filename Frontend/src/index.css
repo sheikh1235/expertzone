@@ -29,6 +29,7 @@ body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   color: rgb(20, 20, 20);
+  min-width: 74em;
 }
 
 .light {
@@ -51,4 +52,24 @@ body {
   text-transform: uppercase;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.4);
+}
+
+/* common green button */
+
+#b1 {
+  margin-top: 5%;
+  width: 100%;
+  padding: 3%;
+  background-color: #59b210;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#b1:hover {
+  opacity: 0.8;
 }

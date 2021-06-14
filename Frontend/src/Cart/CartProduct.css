@@ -1,0 +1,52 @@
+/* Author: Asadullah; Roll No. 18L-1008 */
+
+/* product row CSS starts */
+
+.cart_product_thumb > img {
+  width: 50px;
+  max-height: 50px;
+  object-fit: cover;
+  overflow: hidden;
+}
+.cart_product {
+  font-size: 14px;
+  padding: 4px 0;
+}
+.trash_can_icon {
+  font-size: 17px;
+  padding: 14px 14px;
+}
+
+.cart_product_name {
+  width: 680px;
+}
+#cart_product_name_id {
+  padding-left: 14px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.cart_product_price {
+  width: 100px;
+}
+#trash_can {
+  cursor: pointer;
+}
+
+.cart_product_thumb {
+  width: 80px;
+}
+
+.cart_product_quantity {
+  width: 100px;
+}
+.cart_product > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qty_range > input {
+  width: 50px;
+}
+/* product row CSS ends */

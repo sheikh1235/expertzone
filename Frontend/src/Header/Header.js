@@ -3,6 +3,7 @@
 import React, { Component } from "react";
 import header_logo from "../Pics/ez_logo_head.svg";
 import search_logo from "../Pics/search_logo2.png";
+import ShoppingCart from "@material-ui/icons/ShoppingCart";
 import "./Header.css";
 
 class Header extends Component {
@@ -37,7 +38,9 @@ class Header extends Component {
                     <img src={search_logo} alt="search_logo" />
                   </button>
                 </div>
-                <div class="cart_logo">cart</div>
+                <div class="cart_logo">
+                  <ShoppingCart></ShoppingCart>
+                </div>
               </div>
             </div>
           </div>
@@ -68,22 +71,22 @@ class Header extends Component {
                 </div>
               </li>
               <li class="nav_link">
-                <a id={this.state.active[0]} href="#">
+                <a id={this.state.active[0]} href="/home">
                   Home
                 </a>
               </li>
               <li class="nav_link">
-                <a id={this.state.active[1]} href="#">
+                <a id={this.state.active[1]} href="/shop">
                   Shop
                 </a>
               </li>
               <li class="nav_link">
-                <a id={this.state.active[2]} href="#">
+                <a id={this.state.active[2]} href="/contact-us">
                   Contact us
                 </a>
               </li>
               <li class="nav_link">
-                <a id={this.state.active[3]} href="#">
+                <a id={this.state.active[3]} href="/about-us">
                   About us
                 </a>
               </li>

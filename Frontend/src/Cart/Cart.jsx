@@ -1,78 +1,151 @@
 //Author: Asadullah; Roll No: 18L-1008
 
 import React, { Component } from "react";
+import ErrorMessage from "../ExtraComponents/ErrorMessage";
 import "./Cart.css";
+import CartProduct from "./CartProduct";
 import products from "./CartProductList";
 
 class Cart extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      products: products,
+    };
   }
-  render() {
-    let product = products[0];
-    return (
-      <div>
-        <div className="page_header_con">
-          <div className="container">
-            <h1 className="page_heading">Cart summary</h1>
-          </div>
-        </div>
 
+  onQuantityChange = (id, qty) => {
+    const updatedProducts = this.state.products.map((product) => {
+      if (product.id === id) {
+        product.quantity = parseInt(qty);
+      }
+      return product;
+    });
+    this.setState({
+      products: updatedProducts,
+    });
+  };
+  onProductDelete = (id) => {
+    const updatedProducts = this.state.products.filter((product) => {
+      return product.id !== id;
+    });
+    console.log(updatedProducts);
+    this.setState({
+      products: updatedProducts,
+    });
+  };
+
+  render() {
+    if (this.state.products.length > 0) {
+      let Subtotal = 0,
+        Discount = 0;
+      for (let i = 0; i < this.state.products.length; ++i) {
+        Subtotal +=
+          this.state.products[i].quantity * this.state.products[i].price;
+        Discount +=
+          this.state.products[i].discount * this.state.products[i].quantity;
+      }
+      let totalPrice = Subtotal - Discount;
+      return (
         <div className="container">
           <div className="cart_summary">
             <div className="cart_table_wrap">
               <table className="cart_table">
                 <thead>
                   <tr>
-                    <th className="cart_table_heading">&nbsp;</th>
-                    <th className="cart_table_heading">Product</th>
-                    <th className="cart_table_heading">Descrpition</th>
-                    <th className="cart_table_heading">Price</th>
-                    <th className="cart_table_heading">Quantity</th>
-                    <th className="cart_table_heading">Subtotal</th>
+                    <th className="cart_table_heading">
+                      <span>&nbsp;</span>
+                    </th>
+                    <th className="cart_table_heading">
+                      <span>Product</span>
+                    </th>
+                    <th className="cart_table_heading">
+                      <span>Descrpition</span>
+                    </th>
+                    <th className="cart_table_heading">
+                      <span>Price</span>
+                    </th>
+                    <th className="cart_table_heading">
+                      <span>Quantity</span>
+                    </th>
+                    <th className="cart_table_heading">
+                      <span>Subtotal</span>
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr class="cart_product">
-                    <td class="cart_product">
-                      <div className="trash_can_icon">
-                        <i id="trash_can" class="fa fa-trash"></i>
+                  {this.state.products.map((product) => {
+                    return (
+                      <CartProduct
+                        product={product}
+                        onQuantityChange={this.onQuantityChange}
+                        onProductDelete={this.onProductDelete}
+                      />
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+
+            <div className="cart_total_wrap">
+              <table className="cart_total">
+                <tbody>
+                  <tr>
+                    <td>
+                      <div className="cart_total_sub">
+                        <span>Subtotal:</span>
                       </div>
                     </td>
-                    <td class="cart_product">
-                      <div className="cart_product_thumb">
-                        <img src={product.img} alt={product.id} />
+
+                    <td>
+                      <div className="cart_total_res">
+                        <span>Rs. {Subtotal}</span>
                       </div>
                     </td>
-                    <td class="cart_product">
-                      <div className="cart_product_name">
-                        <span>{product.desc}</span>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div className="cart_total_sub">
+                        <span>Discount:</span>
                       </div>
                     </td>
-                    <td class="cart_product">
-                      <div className="cart_product_price">
-                        <span>PKR {product.price}</span>
+
+                    <td>
+                      <div className="cart_total_res">
+                        <span id="discount">Rs. -{Discount}</span>
                       </div>
                     </td>
-                    <td class="cart_product">
-                      <div className="cart_product_quantity">
-                        <span>{product.quantity}</span>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div className="cart_total_sub">
+                        <span>Total:</span>
                       </div>
                     </td>
-                    <td class="cart_product">
-                      <div className="cart_product_sub">
-                        <span>PKR {product.price * product.quantity}</span>
+
+                    <td>
+                      <div className="cart_total_res">
+                        <span className="total">Rs. {totalPrice}</span>
                       </div>
                     </td>
                   </tr>
                 </tbody>
               </table>
+              <div className="proceed_to_checkout">
+                <button id="b1" type="submit">
+                  PROCEED TO CHECKOUT
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    );
+      );
+    } else {
+      return (
+        <ErrorMessage message="Your cart is empty add items to your cart to proceed to checkout" />
+      );
+    }
   }
 }
 

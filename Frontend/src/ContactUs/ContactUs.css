@@ -1,0 +1,75 @@
+/*Author: Ayesha Azhar; RollNo: 18L-0983*/
+
+.contactus_con {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 70px 0;
+}
+.Instruction_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid rgb(0, 0, 0, 0.3);
+  border-radius: 3px;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  color: rgb(0, 0, 0, 0.6);
+  width: 580px;
+  padding: 30px 60px 0 60px;
+}
+
+.Instruction_box > p {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.Subscription_field {
+  padding-bottom: 16px;
+}
+.field {
+  border-color: rgb(0, 0, 0, 0.3);
+  border-radius: 2px;
+  width: 340px;
+  height: 32px;
+  padding: 0px 4px;
+  font-size: 15px;
+}
+.button_container {
+  padding-bottom: 30px;
+}
+.Subscribe_button {
+  border: none;
+  border-radius: 2px;
+  width: 130px;
+  height: 30px;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background-color: #59b210;
+
+  transition: 0.25s ease;
+  cursor: pointer;
+}
+.Address_Container {
+  width: 500px;
+  height: 300px;
+  border: 1px solid rgb(0, 0, 0, 0.3);
+  margin-top: 0px;
+  top: 0%;
+  border-radius: 3px;
+}
+.Address_info {
+  padding-top: 20px;
+  padding-left: 50px;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  color: rgb(0, 0, 0, 0.6);
+}
+.Subscribe_button:hover {
+  opacity: 0.8;
+}
